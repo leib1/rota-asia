@@ -1,9 +1,9 @@
 
-# Rota Ásia
+# Tourásia
 
 ## Sobre o projeto
 
-Rota Ásia é um guia turístico digital desenvolvido
+Tourásia é um guia turístico digital desenvolvido
 para apresentar cinco destinos únicos no continente asiático.
 
 ## Objetivo

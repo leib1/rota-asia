@@ -7,61 +7,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Descubra destinos turísticos incríveis na Ásia.">
+        content="Explore o Tourásia e descubra cinco destinos turísticos incríveis no continente asiático.">
 
-    <title>Rota Ásia | Guia Turístico</title>
+    <meta name="theme-color" content="#284B38">
 
+    <title>TOURÁSIA | Explore novos horizontes</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos do projeto -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Rota Ásia</h1>
+    <!-- Cabeçalho e navegação -->
+    <header class="header">
+        <div class="container header__content">
 
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#destinos">Destinos</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-            </ul>
-        </nav>
+            <a href="#inicio" class="logo" aria-label="Tourásia - Página inicial">
+                TOUR <span>ÁSIA</span>
+            </a>
+
+            <nav class="navigation" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
     <main>
 
-        <section id="inicio">
-            <h2>Explore os encantos da Ásia</h2>
+        <!-- Apresentação principal -->
+        <section class="hero" id="inicio">
 
-            <p>
-                Descubra paisagens, culturas e experiências
-                em destinos extraordinários do continente asiático.
-            </p>
+            <div class="container hero__content">
+
+                <p class="hero__eyebrow">
+                    DESCUBRA O CONTINENTE ASIÁTICO
+                </p>
+
+                <h1>
+                    Explore novos
+                    <span>horizontes.</span>
+                </h1>
+
+                <p class="hero__description">
+                    Uma jornada por paisagens extraordinárias,
+                    culturas fascinantes e destinos inesquecíveis.
+                </p>
+
+                <a href="#destinos" class="button">
+                    Conheça os destinos
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+            <div class="hero__decoration" aria-hidden="true">
+                <span>EXPLORE · DESCUBRA · CONHEÇA</span>
+            </div>
+
         </section>
 
-        <section id="destinos">
-            <h2>Nossos destinos</h2>
+        <!-- Apresentação do projeto -->
+        <section class="introduction" id="sobre">
 
-            <p>
-                Em breve, apresentaremos cinco destinos
-                selecionados para sua próxima aventura.
-            </p>
+            <div class="container introduction__content">
+
+                <p class="section-label">SOBRE O TOURÁSIA</p>
+
+                <h2>
+                    A Ásia é um continente de
+                    <span>inúmeras descobertas.</span>
+                </h2>
+
+                <p>
+                    Do contato com a natureza à riqueza das tradições
+                    culturais, cada destino revela experiências e
+                    paisagens únicas.
+                </p>
+
+                <p>
+                    O Tourásia reúne informações sobre cinco destinos
+                    turísticos para apresentar suas características,
+                    atrações e particularidades.
+                </p>
+
+            </div>
+
         </section>
 
-        <section id="sobre">
-            <h2>Sobre o projeto</h2>
+        <!-- Apresentação dos destinos -->
+        <section class="destinations" id="destinos">
 
-            <p>
-                O Rota Ásia é um guia turístico digital
-                dedicado à descoberta de destinos asiáticos.
-            </p>
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="section-label">NOSSOS DESTINOS</p>
+
+                        <h2>
+                            Cinco destinos.
+                            <span>Infinitas descobertas.</span>
+                        </h2>
+                    </div>
+
+                </div>
+
+                <div class="destination-list">
+
+                    <article class="destination-item">
+                        <span>01</span>
+                        <div>
+                            <h3>Bali</h3>
+                            <p>Indonésia</p>
+                        </div>
+                    </article>
+
+                    <article class="destination-item">
+                        <span>02</span>
+                        <div>
+                            <h3>Baía de Ha Long</h3>
+                            <p>Vietnã</p>
+                        </div>
+                    </article>
+
+                    <article class="destination-item">
+                        <span>03</span>
+                        <div>
+                            <h3>Kyoto</h3>
+                            <p>Japão</p>
+                        </div>
+                    </article>
+
+                    <article class="destination-item">
+                        <span>04</span>
+                        <div>
+                            <h3>Ilha de Jeju</h3>
+                            <p>Coreia do Sul</p>
+                        </div>
+                    </article>
+
+                    <article class="destination-item">
+                        <span>05</span>
+                        <div>
+                            <h3>Zhangjiajie</h3>
+                            <p>China</p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
         </section>
 
     </main>
 
-    <footer>
-        <p>Rota Ásia - Guia Turístico Digital</p>
-        <p>Projeto acadêmico de desenvolvimento web.</p>
+    <!-- Rodapé -->
+    <footer class="footer">
+
+        <div class="container footer__content">
+
+            <a href="#inicio" class="logo logo--footer">
+                TOUR <span>ÁSIA</span>
+            </a>
+
+            <p>
+                Explore. Descubra. Conheça.
+            </p>
+
+            <p class="footer__copyright">
+                Projeto acadêmico de desenvolvimento web.
+            </p>
+
+        </div>
+
     </footer>
 
 </body>
