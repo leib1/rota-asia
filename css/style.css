@@ -515,3 +515,107 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* =========================================
+   PESQUISA E FILTROS DOS DESTINOS
+========================================= */
+
+.destination-tools {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 35px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 16px 20px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+
+    color: var(--color-text);
+    background-color: var(--color-background);
+
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+
+    outline: none;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: var(--color-primary-light);
+    box-shadow: 0 0 0 3px rgba(113, 140, 114, 0.15);
+}
+
+.search-box input::placeholder {
+    color: var(--color-text-light);
+}
+
+.destination-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.filter-button {
+    padding: 9px 20px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 30px;
+
+    color: var(--color-primary);
+    background-color: transparent;
+
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+    border-color: var(--color-primary-light);
+    background-color: var(--color-surface);
+}
+
+.filter-button.active {
+    color: var(--color-white);
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+}
+
+.filter-button:focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 4px;
+}
+
+.search-feedback {
+    margin: 10px 0 25px;
+    color: var(--color-text-light);
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.destination-card[hidden] {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .destination-tools {
+        gap: 18px;
+    }
+
+    .destination-filters {
+        gap: 8px;
+    }
+
+    .filter-button {
+        padding: 8px 15px;
+    }
+}

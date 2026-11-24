@@ -13,7 +13,6 @@
 
     <title>TOURÁSIA | Explore novos horizontes</title>
 
-    <link rel="stylesheet" href="css/style.css">
     <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -22,8 +21,10 @@
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-
-    <!-- Estilos do projeto -->
+    
+    <script src="js/script.js" defer></script>
+    
+        <!-- Estilos do projeto -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -129,10 +130,70 @@
 
                 </div>
 
+                    <!-- Pesquisa e filtros dos destinos -->
+                    <div class="destination-tools">
+
+                        <div class="search-box">
+                            <input
+                                type="search"
+                                id="destination-search"
+                                placeholder="Pesquise por destino, país ou atração..."
+                                aria-label="Pesquisar destinos"
+                            >
+                        </div>
+
+                        <div class="destination-filters"
+                             aria-label="Filtrar destinos por categoria">
+
+                            <button
+                                class="filter-button active"
+                                type="button"
+                                data-filter="all"
+                                aria-pressed="true"
+                            >
+                                Todos
+                            </button>
+
+                            <button
+                                class="filter-button"
+                                type="button"
+                                data-filter="nature"
+                                aria-pressed="false"
+                            >
+                                Natureza
+                            </button>
+
+                            <button
+                                class="filter-button"
+                                type="button"
+                                data-filter="culture"
+                                aria-pressed="false"
+                            >
+                                Cultura
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <p
+                        class="search-feedback"
+                        id="search-feedback"
+                        role="status"
+                        aria-live="polite"
+                        hidden
+                    >
+                        Nenhum destino encontrado.
+                    </p>
+
                 <div class="destination-list">
 
                     <!-- Destino 01: Bali -->
-                    <article class="destination-card">
+                    <article
+                        class="destination-card"
+                        data-category="nature culture"
+                        data-search="bali indonesia natureza cultura templos praias arrozais ubud"
+                    >
 
                         <img
                             src="assets/images/bali.jpg"
@@ -159,7 +220,11 @@
 
 
                     <!-- Destino 02: Baía de Ha Long -->
-                    <article class="destination-card">
+                    <article
+                        class="destination-card"
+                        data-category="nature"
+                        data-search="baia de ha long ha long vietna natureza ilhas rochosas cavernas aguas esmeraldas"
+                    >
 
                         <img
                             src="assets/images/ha-long.jpg"
@@ -186,7 +251,11 @@
 
 
                     <!-- Destino 03: Kyoto -->
-                    <article class="destination-card">
+                    <article
+                        class="destination-card"
+                        data-category="culture"
+                        data-search="kyoto japao cultura templos jardins tradicionais arquitetura japonesa"
+                    >
 
                         <img
                             src="assets/images/kyoto.jpg"
@@ -213,7 +282,11 @@
 
 
                     <!-- Destino 04: Ilha de Jeju -->
-                    <article class="destination-card">
+                    <article
+                        class="destination-card"
+                        data-category="nature"
+                        data-search="ilha de jeju jeju coreia do sul natureza vulcoes praias cachoeiras"
+                    >
 
                         <img
                             src="assets/images/jeju.jpg"
@@ -240,7 +313,11 @@
 
 
                     <!-- Destino 05: Zhangjiajie -->
-                    <article class="destination-card">
+                    <article
+                        class="destination-card"
+                        data-category="nature"
+                        data-search="zhangjiajie china natureza montanhas pilares rochosos parque nacional"
+                    >
 
                         <img
                             src="assets/images/zhangjiajie.jpg"
