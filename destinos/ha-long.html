@@ -16,21 +16,40 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/style.css">
+    
+    <script src="../js/script.js" defer></script>
+
 </head>
 
 <body>
 
+    <!-- Cabeçalho e navegação -->
     <header class="header">
         <div class="container header__content">
-            <a href="../index.html" class="logo">TOUR <span>ÁSIA</span></a>
+
+            <a href="../index.html" class="logo" aria-label="Tourásia - Página inicial">
+                TOUR <span>ÁSIA</span>
+            </a>
 
             <nav class="navigation" aria-label="Navegação principal">
                 <ul>
-                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../index.html#inicio">Início</a></li>
                     <li><a href="../index.html#destinos">Destinos</a></li>
                     <li><a href="../index.html#sobre">Sobre</a></li>
                 </ul>
             </nav>
+
+            <!-- Botão para alternar o tema -->
+            <button
+                class="theme-toggle"
+                id="theme-toggle"
+                type="button"
+                aria-label="Ativar tema escuro"
+                aria-pressed="false"
+            >
+                ☾
+            </button>
+
         </div>
     </header>
 

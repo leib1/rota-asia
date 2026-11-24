@@ -1,15 +1,36 @@
 
 /* =========================================
-   PESQUISA E FILTROS DOS DESTINOS
+   1. TEMA CLARO E ESCURO
 ========================================= */
 
-// Seleciona os elementos do HTML
+const themeButton = document.querySelector("#theme-toggle");
+
+if (themeButton) {
+    themeButton.addEventListener("click", () => {
+        const isDark = document.body.dataset.theme === "dark";
+
+        if (isDark) {
+            document.body.dataset.theme = "light";
+            themeButton.textContent = "☾";
+            themeButton.setAttribute("aria-label", "Ativar tema escuro");
+            themeButton.setAttribute("aria-pressed", "false");
+        } else {
+            document.body.dataset.theme = "dark";
+            themeButton.textContent = "☀";
+            themeButton.setAttribute("aria-label", "Ativar tema claro");
+            themeButton.setAttribute("aria-pressed", "true");
+        }
+    });
+}
+
+/* =========================================
+   2. PESQUISA E FILTROS DOS DESTINOS
+========================================= */
+
+// Seleciona os elementos da página inicial
 const searchInput = document.querySelector("#destination-search");
-
 const filterButtons = document.querySelectorAll(".filter-button");
-
 const destinationCards = document.querySelectorAll(".destination-card");
-
 const searchFeedback = document.querySelector("#search-feedback");
 
 // Armazena a categoria selecionada
@@ -26,29 +47,19 @@ function normalizeText(text) {
 
 // Executa a pesquisa e os filtros
 function filterDestinations() {
-
     const searchTerm = normalizeText(searchInput.value);
-
     let visibleCount = 0;
 
-    // Percorre todos os cards
     destinationCards.forEach(card => {
-
-        const searchableText = normalizeText(
-            card.dataset.search
-        );
-
+        const searchableText = normalizeText(card.dataset.search);
         const categories = card.dataset.category.split(" ");
 
-        // Verifica se corresponde à pesquisa
         const matchesSearch = searchableText.includes(searchTerm);
 
-        // Verifica se corresponde à categoria
         const matchesCategory =
             selectedCategory === "all" ||
             categories.includes(selectedCategory);
 
-        // Define se o card deve aparecer
         const isVisible = matchesSearch && matchesCategory;
 
         card.hidden = !isVisible;
@@ -56,39 +67,33 @@ function filterDestinations() {
         if (isVisible) {
             visibleCount++;
         }
-
     });
 
-    // Exibe mensagem quando não existem resultados
-    searchFeedback.hidden = visibleCount !== 0;
-
+    if (searchFeedback) {
+        searchFeedback.hidden = visibleCount !== 0;
+    }
 }
 
-// Pesquisa enquanto o usuário digita
-searchInput.addEventListener("input", filterDestinations);
+// Só ativa a pesquisa se os elementos existirem
+if (searchInput && destinationCards.length > 0) {
+    searchInput.addEventListener("input", filterDestinations);
+}
 
 // Eventos dos botões de categoria
 filterButtons.forEach(button => {
-
     button.addEventListener("click", () => {
-
-        // Atualiza a categoria selecionada
         selectedCategory = button.dataset.filter;
 
-        // Atualiza o botão ativo
         filterButtons.forEach(item => {
-
             item.classList.remove("active");
             item.setAttribute("aria-pressed", "false");
-
         });
 
         button.classList.add("active");
         button.setAttribute("aria-pressed", "true");
 
-        // Atualiza os resultados
-        filterDestinations();
-
+        if (searchInput) {
+            filterDestinations();
+        }
     });
-
 });
