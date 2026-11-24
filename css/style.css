@@ -619,3 +619,253 @@ a {
         padding: 8px 15px;
     }
 }
+
+
+/* =========================================
+   PÁGINAS INDIVIDUAIS DOS DESTINOS
+========================================= */
+
+/* Apresentação do destino */
+
+.destination-hero {
+    padding: 75px 0 0;
+    background-color: var(--color-surface);
+}
+
+.destination-hero__content {
+    padding-bottom: 45px;
+}
+
+.destination-hero h1 {
+    margin: 15px 0;
+    color: var(--color-primary);
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    line-height: 1.1;
+}
+
+.destination-hero__description {
+    max-width: 650px;
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+}
+
+.destination-hero__location {
+    margin-top: 20px;
+    color: var(--color-primary-light);
+    font-weight: 600;
+}
+
+.destination-hero__image {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Seções gerais */
+
+.destination-section {
+    padding: 85px 0;
+}
+
+.destination-section--alternate {
+    background-color: var(--color-surface);
+}
+
+.destination-introduction {
+    max-width: 800px;
+    text-align: center;
+}
+
+.destination-section h2,
+.destination-introduction h2 {
+    margin: 18px 0 25px;
+    color: var(--color-primary);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.destination-section h2 span,
+.destination-introduction h2 span {
+    color: var(--color-secondary);
+}
+
+.destination-introduction > p:not(.section-label) {
+    margin-top: 15px;
+    color: var(--color-text-light);
+}
+
+
+/* Informações e destaques */
+
+.destination-information {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.destination-information__text > p:not(.section-label) {
+    margin-top: 15px;
+    color: var(--color-text-light);
+}
+
+.destination-information__highlight {
+    padding: 35px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-background);
+}
+
+.destination-information__number {
+    color: var(--color-secondary);
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+}
+
+.destination-information__highlight h3 {
+    margin: 15px 0 10px;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.destination-information__highlight p {
+    color: var(--color-text-light);
+}
+
+
+/* Cabeçalhos internos */
+
+.destination-section__heading {
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.destination-section__heading > p:not(.section-label) {
+    color: var(--color-text-light);
+}
+
+
+/* Tópicos de informação */
+
+.destination-topics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.destination-topic {
+    padding: 28px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-background);
+}
+
+.destination-topic h3 {
+    margin-bottom: 12px;
+    color: var(--color-primary);
+    font-size: 1.4rem;
+}
+
+.destination-topic p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+
+/* Principais atrações */
+
+.destination-attractions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.destination-attraction {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-background);
+}
+
+.destination-attraction > span {
+    color: var(--color-secondary);
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+}
+
+.destination-attraction h3 {
+    margin-bottom: 8px;
+    color: var(--color-primary);
+    font-size: 1.3rem;
+}
+
+.destination-attraction p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+
+/* Navegação entre destinos */
+
+.destination-navigation {
+    padding: 30px 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.destination-navigation__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.destination-navigation a {
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.destination-navigation a:hover {
+    color: var(--color-secondary);
+}
+
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+
+    .destination-hero {
+        padding-top: 55px;
+    }
+
+    .destination-hero__image {
+        height: 280px;
+    }
+
+    .destination-section {
+        padding: 60px 0;
+    }
+
+    .destination-information {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .destination-topics {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-attractions {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-navigation__content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
