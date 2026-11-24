@@ -36,6 +36,24 @@ cultura, atrações e experiências.
 
 ## Histórico de versões
 
+### v0.2.0 — Página inicial e layout responsivo
+
+Definição da identidade visual do Tourásia.
+
+Implementação da paleta de cores e tipografia.
+
+Desenvolvimento do cabeçalho e navegação.
+
+Criação do banner principal.
+
+Implementação da apresentação do projeto.
+
+Apresentação inicial dos cinco destinos.
+
+Desenvolvimento do rodapé.
+
+Adaptação do layout para dispositivos móveis.
+
 ### v0.1.1 - Atualização da seleção de destinos
 
 - Inclusão de Zhangjiajie, na China.
